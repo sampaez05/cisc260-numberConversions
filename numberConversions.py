@@ -68,7 +68,10 @@ def fromDecimal (integer:int):
 
     return "This integer in base 2 is " + toString(binary) + "\nThis integer in base 16 is " +toString(hex)
 
-print(fromDecimal(266166237))
+decimal = input("Enter an integer, either positive or negative, in base 10: ")
+print(fromDecimal(int(decimal)))
+
+# example print statemtent: print(fromDecimal(266166237))
 
 def fromHex(hexNum:str):
     hex = list(hexNum)
@@ -111,6 +114,8 @@ def fromHex(hexNum:str):
     decimal = hex[7]*1 + hex[6]*16 + hex[5]*256 + hex[4]*4096 + hex[3]*65536 + hex[2]*1048576 + hex[1]*16777216 + hex[0]*268435456
     return "This integer in base 10 is " + str(decimal)
 
-print(fromHex("0FDD5FDD"))
+hex = input("Enter a positive integer in base 16: ")
+print(fromHex(hex))
+#example print statement: print(fromHex("0FDD5FDD"))
 
 
